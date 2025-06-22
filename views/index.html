@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Service - Mobile Auto Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="/assets/logo/logo.png" alt="Local Service Logo" id="logo">
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#service-area">Service Area</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Fast, Reliable Mobile Auto Service in Hall County, GA</h1>
+            <p>We come to you for oil changes, lockouts, and battery jumps—saving time and stress.</p>
+            <a href="#contact" class="btn btn-primary">Request Service</a>
+        </div>
+    </section>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-blocks">
+                <div class="service-block">
+                    <h3>Oil Changes</h3>
+                    <p>No shop visit needed. We come to you.</p>
+                </div>
+                <div class="service-block">
+                    <h3>Lockouts</h3>
+                    <p>Regain access to your car fast.</p>
+                </div>
+                <div class="service-block">
+                    <h3>Battery Jumps</h3>
+                    <p>We’ll get your engine running again.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service-area" class="service-area-section">
+        <div class="container">
+            <h2>Service Area</h2>
+            <p>We proudly serve Hall County, Georgia, and surrounding areas, including major cities like Gainesville, Oakwood, and Flowery Branch.</p>
+            <div class="map-placeholder">
+                <!-- Placeholder for Google Map Embed -->
+                <p>[Embedded Google Map for Hall County will go here]</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="service-type">Service Type:</label>
+                    <select id="service-type" name="service-type" required>
+                        <option value="">Select a service...</option>
+                        <option value="oil-change">Oil Change</option>
+                        <option value="lockout">Lockout</option>
+                        <option value="battery-jump">Battery Jump</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit Request</button>
+            </form>
+            <p class="form-submission-note">Note: This form is a placeholder. Submissions are not currently processed.</p>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="contact-info">
+                    <p><strong>Local Service</strong></p>
+                    <p>Phone: (555) 123-4567</p>
+                    <p>Email: contact@localservice.dev</p>
+                </div>
+                <div class="operating-hours">
+                    <p><strong>Operating Hours:</strong></p>
+                    <p>Mon - Fri: 8:00 AM - 6:00 PM</p>
+                    <p>Sat: 9:00 AM - 3:00 PM</p>
+                    <p>Sun: Closed</p>
+                </div>
+                <div class="social-links">
+                    <p><strong>Follow Us:</strong></p>
+                    <!-- Add actual links if available -->
+                    <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+                </div>
+            </div>
+            <p class="copyright">&copy; 2023 Local Service. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+</body>
+</html>
