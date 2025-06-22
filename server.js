@@ -19,11 +19,36 @@ app.get('/', (req, res) => {
 
 // Route for handling contact form submission
 app.post('/send-contact-form', (req, res) => {
-    const { name, phone, "service-type": serviceType, message } = req.body;
+    const {
+        name,
+        phone,
+        location, // Added
+        "service-type": serviceType,
+        message,
+        "vehicle-make": vehicleMake, // Added
+        "vehicle-model": vehicleModel, // Added
+        "vehicle-year": vehicleYear, // Added
+        "license-plate": licensePlate // Added
+    } = req.body;
 
     // Basic validation
-    if (!name || !phone || !serviceType) {
-        return res.status(400).json({ success: false, message: 'Name, phone, and service type are required.' });
+    if (!name || !phone || !location || !serviceType) {
+        return res.status(400).json({ success: false, message: 'Name, phone, location, and service type are required.' });
+    }
+
+    // Phone validation (basic regex, similar to client-side but can be more robust)
+    if (!/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/.test(phone)) {
+        return res.status(400).json({ success: false, message: 'Invalid phone number format.' });
+    }
+
+    // Conditional validation for oil change
+    if (serviceType === 'oil-change') {
+        if (!vehicleMake || !vehicleModel || !vehicleYear || !licensePlate) {
+            return res.status(400).json({ success: false, message: 'Vehicle make, model, year, and license plate are required for oil change service.' });
+        }
+        if (!/^\d{4}$/.test(vehicleYear) || parseInt(vehicleYear) < 1900 || parseInt(vehicleYear) > new Date().getFullYear() + 1) {
+            return res.status(400).json({ success: false, message: 'Invalid vehicle year.' });
+        }
     }
 
     // Create a transporter object using SMTP transport
@@ -44,7 +69,14 @@ app.post('/send-contact-form', (req, res) => {
             <ul>
                 <li><strong>Name:</strong> ${name}</li>
                 <li><strong>Phone:</strong> ${phone}</li>
+                <li><strong>Location:</strong> ${location}</li>
                 <li><strong>Service Type:</strong> ${serviceType}</li>
+                ${serviceType === 'oil-change' ? `
+                <li><strong>Vehicle Make:</strong> ${vehicleMake}</li>
+                <li><strong>Vehicle Model:</strong> ${vehicleModel}</li>
+                <li><strong>Vehicle Year:</strong> ${vehicleYear}</li>
+                <li><strong>License Plate:</strong> ${licensePlate}</li>
+                ` : ''}
                 <li><strong>Message:</strong> ${message || 'N/A'}</li>
             </ul>
         `,
