@@ -8,8 +8,8 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background-color: #fff;
+    color: #000000; /* textPrimary */
+    background-color: #EFE7DA; /* background */
 }
 
 .container {
@@ -20,11 +20,11 @@ body {
 }
 
 h1, h2, h3 {
-    color: #1e2a38; /* Navy Blue */
+    color: #000000; /* textPrimary */
 }
 
 a {
-    color: #ff6b35; /* Orange/Red Accent */
+    color: #CBAF91; /* accent */
     text-decoration: none;
 }
 
@@ -39,8 +39,8 @@ img {
 
 /* Header & Navigation */
 header {
-    background-color: #1e2a38; /* Navy Blue */
-    color: #fff;
+    background-color: #CBAF91; /* accent */
+    color: #FFFFFF; /* white */
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -57,10 +57,10 @@ header .container {
 #logo {
     height: 50px; /* Adjust as needed */
     /* Basic placeholder style for logo if image is missing */
-    background-color: #ff6b35;
+    background-color: #CBAF91; /* accent */
     padding: 5px;
     border-radius: 3px;
-    color: white;
+    color: #FFFFFF; /* white */
     font-weight: bold;
     text-align: center;
     display: inline-block;
@@ -76,19 +76,19 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #fff;
+    color: #FFFFFF; /* white */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #ff6b35; /* Orange/Red Accent */
+    color: #000000; /* textPrimary */
     text-decoration: none;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #f4f4f4; /* Light gray background */
+    background-color: #EFE7DA; /* background */
     padding: 60px 0;
     text-align: center;
 }
@@ -96,13 +96,13 @@ header nav ul li a:hover {
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #1e2a38;
+    color: #000000; /* textPrimary */
 }
 
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
-    color: #555;
+    color: #333333; /* textSecondary */
 }
 
 .btn {
@@ -115,13 +115,13 @@ header nav ul li a:hover {
 }
 
 .btn-primary {
-    background-color: #ff6b35; /* Orange/Red Accent */
-    color: #fff;
+    background-color: #CBAF91; /* accent */
+    color: #FFFFFF; /* white */
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #e05a2d; /* Darker Orange/Red */
+    background-color: #b08f73; /* Darker accent */
     transform: translateY(-2px);
     text-decoration: none;
 }
@@ -145,8 +145,8 @@ header nav ul li a:hover {
 }
 
 .service-block {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #FFFFFF; /* white */
+    border: 1px solid #CBAF91; /* accent */
     border-radius: 8px;
     padding: 20px;
     width: calc(33.333% - 20px); /* Adjust for gap */
@@ -162,13 +162,13 @@ header nav ul li a:hover {
 .service-block h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #1e2a38;
+    color: #000000; /* textPrimary */
 }
 
 /* Service Area Section */
 .service-area-section {
     padding: 40px 0;
-    background-color: #f9f9f9;
+    background-color: #EFE7DA; /* background */
 }
 
 .service-area-section h2 {
@@ -183,7 +183,7 @@ header nav ul li a:hover {
 }
 
 .map-placeholder {
-    background-color: #e0e0e0;
+    background-color: #CBAF91; /* accent */
     min-height: 300px;
     display: flex;
     justify-content: center;
@@ -193,7 +193,7 @@ header nav ul li a:hover {
 }
 
 .map-placeholder p {
-    color: #555;
+    color: #333333; /* textSecondary */
     font-style: italic;
 }
 
@@ -211,10 +211,10 @@ header nav ul li a:hover {
 #contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #f9f9f9;
+    background-color: #EFE7DA; /* background */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Assuming black shadow is fine */
 }
 
 .form-group {
@@ -225,7 +225,7 @@ header nav ul li a:hover {
     display: block;
     margin-bottom: 5px;
     font-weight: bold;
-    color: #1e2a38;
+    color: #000000; /* textPrimary */
 }
 
 .form-group input[type="text"],
@@ -234,9 +234,11 @@ header nav ul li a:hover {
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #CBAF91; /* accent */
     border-radius: 4px;
     font-family: 'Roboto', sans-serif;
+    background-color: #FFFFFF; /* white */
+    color: #000000; /* textPrimary */
 }
 
 .form-group textarea {
@@ -247,14 +249,14 @@ header nav ul li a:hover {
     text-align: center;
     margin-top: 15px;
     font-style: italic;
-    color: #555;
+    color: #333333; /* textSecondary */
     font-size: 0.9rem;
 }
 
 /* Footer */
 footer {
-    background-color: #1e2a38; /* Navy Blue */
-    color: #e0e0e0;
+    background-color: #CBAF91; /* accent */
+    color: #FFFFFF; /* white */
     padding: 30px 0;
     text-align: center;
 }
@@ -275,27 +277,29 @@ footer {
 
 
 .footer-content h3 {
-    color: #fff;
+    color: #FFFFFF; /* white */
     margin-bottom: 10px;
 }
 
 .footer-content p {
     margin-bottom: 5px;
     font-size: 0.9rem;
+    color: #FFFFFF; /* white */
 }
 
 .footer-content a {
-    color: #ff6b35; /* Orange/Red Accent */
+    color: #000000; /* textPrimary */
 }
 .footer-content a:hover {
-    color: #fff;
+    color: #FFFFFF; /* white */
 }
 
 .copyright {
     font-size: 0.85rem;
-    border-top: 1px solid #3c4a58; /* Slightly lighter navy for divider */
+    border-top: 1px solid #FFFFFF; /* white */
     padding-top: 20px;
     margin-top: 10px;
+    color: #FFFFFF; /* white */
 }
 
 /* Responsive Design */
