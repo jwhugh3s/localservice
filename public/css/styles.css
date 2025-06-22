@@ -254,6 +254,12 @@ header nav ul li a:hover {
     min-height: 1.2em; /* Reserve space to prevent layout shift */
 }
 
+.error-message { /* Style for individual field error messages */
+    color: #dc3545; /* Red for error */
+    font-size: 0.85rem;
+    margin-top: 4px;
+}
+
 .form-submission-note.success {
     color: #28a745; /* Green for success */
     font-weight: bold;
