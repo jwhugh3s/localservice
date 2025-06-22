@@ -9,7 +9,7 @@ body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
     color: #000000; /* textPrimary */
-    background-color: #EFE7DA; /* background */
+    background-color: #EEE6D9; /* pageBackground */
 }
 
 .container {
@@ -24,7 +24,7 @@ h1, h2, h3 {
 }
 
 a {
-    color: #87CEEB; /* accent */
+    color: #2F4F4F; /* primaryAccent */
     text-decoration: none;
 }
 
@@ -39,8 +39,8 @@ img {
 
 /* Header & Navigation */
 header {
-    background-color: #87CEEB; /* accent */
-    color: #FFFFFF; /* white */
+    background-color: #2F4F4F; /* primaryAccent */
+    color: #FFFFFF; /* textOnDark/primaryAccentText */
     padding: 1rem 0;
     position: sticky;
     top: 0;
@@ -57,10 +57,10 @@ header .container {
 #logo {
     height: 50px; /* Adjust as needed */
     /* Basic placeholder style for logo if image is missing */
-    background-color: #87CEEB; /* accent */
+    background-color: #2F4F4F; /* primaryAccent */
     padding: 5px;
     border-radius: 3px;
-    color: #FFFFFF; /* white */
+    color: #FFFFFF; /* textOnDark/primaryAccentText */
     font-weight: bold;
     text-align: center;
     display: inline-block;
@@ -76,19 +76,19 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: #FFFFFF; /* white */
+    color: #FFFFFF; /* textOnDark/primaryAccentText */
     font-weight: bold;
     transition: color 0.3s ease;
 }
 
 header nav ul li a:hover {
-    color: #000000; /* textPrimary */
+    color: #EEE6D9; /* pageBackground (for contrast on dark header) */
     text-decoration: none;
 }
 
 /* Hero Section */
 .hero {
-    background-color: #EFE7DA; /* background */
+    background-color: #EEE6D9; /* pageBackground */
     padding: 60px 0;
     text-align: center;
 }
@@ -115,13 +115,13 @@ header nav ul li a:hover {
 }
 
 .btn-primary {
-    background-color: #87CEEB; /* accent */
-    color: #FFFFFF; /* white */
+    background-color: #2F4F4F; /* primaryAccent */
+    color: #FFFFFF; /* primaryAccentText */
     border: none;
 }
 
 .btn-primary:hover {
-    background-color: #76BADA; /* Darker accent */
+    background-color: #1F3A3A; /* darker primaryAccent */
     transform: translateY(-2px);
     text-decoration: none;
 }
@@ -145,8 +145,8 @@ header nav ul li a:hover {
 }
 
 .service-block {
-    background-color: #FFFFFF; /* white */
-    border: 1px solid #87CEEB; /* accent */
+    background-color: #FFFFFF; /* componentWhite */
+    border: 1px solid #DFD7CB; /* slightly darker pageBackground for subtle borders */
     border-radius: 8px;
     padding: 20px;
     width: calc(33.333% - 20px); /* Adjust for gap */
@@ -168,7 +168,7 @@ header nav ul li a:hover {
 /* Service Area Section */
 .service-area-section {
     padding: 40px 0;
-    background-color: #EFE7DA; /* background */
+    background-color: #EEE6D9; /* pageBackground */
 }
 
 .service-area-section h2 {
@@ -183,7 +183,7 @@ header nav ul li a:hover {
 }
 
 .map-placeholder {
-    background-color: #87CEEB; /* accent */
+    background-color: #DFD7CB; /* slightly darker pageBackground */
     min-height: 300px;
     display: flex;
     justify-content: center;
@@ -211,7 +211,7 @@ header nav ul li a:hover {
 #contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #EFE7DA; /* background */
+    background-color: #EEE6D9; /* pageBackground */
     padding: 30px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Assuming black shadow is fine */
@@ -234,10 +234,10 @@ header nav ul li a:hover {
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    border: 1px solid #87CEEB; /* accent */
+    border: 1px solid #DFD7CB; /* slightly darker pageBackground */
     border-radius: 4px;
     font-family: 'Roboto', sans-serif;
-    background-color: #FFFFFF; /* white */
+    background-color: #FFFFFF; /* componentWhite */
     color: #000000; /* textPrimary */
 }
 
@@ -255,8 +255,8 @@ header nav ul li a:hover {
 
 /* Footer */
 footer {
-    background-color: #87CEEB; /* accent */
-    color: #FFFFFF; /* white */
+    background-color: #2F4F4F; /* primaryAccent */
+    color: #FFFFFF; /* textOnDark/primaryAccentText */
     padding: 30px 0;
     text-align: center;
 }
@@ -284,22 +284,22 @@ footer {
 .footer-content p {
     margin-bottom: 5px;
     font-size: 0.9rem;
-    color: #FFFFFF; /* white */
+    color: #FFFFFF; /* textOnDark/primaryAccentText */
 }
 
 .footer-content a {
-    color: #000000; /* textPrimary */
+    color: #EEE6D9; /* pageBackground for contrast on dark footer */
 }
 .footer-content a:hover {
-    color: #FFFFFF; /* white */
+    color: #FFFFFF; /* textOnDark/primaryAccentText */
 }
 
 .copyright {
     font-size: 0.85rem;
-    border-top: 1px solid #FFFFFF; /* white */
+    border-top: 1px solid #DFD7CB; /* lighter contrast against dark footer */
     padding-top: 20px;
     margin-top: 10px;
-    color: #FFFFFF; /* white */
+    color: #FFFFFF; /* textOnDark/primaryAccentText */
 }
 
 /* Responsive Design */
