@@ -251,6 +251,17 @@ header nav ul li a:hover {
     font-style: italic;
     color: #333333; /* textSecondary */
     font-size: 0.9rem;
+    min-height: 1.2em; /* Reserve space to prevent layout shift */
+}
+
+.form-submission-note.success {
+    color: #28a745; /* Green for success */
+    font-weight: bold;
+}
+
+.form-submission-note.error {
+    color: #dc3545; /* Red for error */
+    font-weight: bold;
 }
 
 /* Footer */
